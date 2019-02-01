@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import iGreenCircle from './green-circle.svg'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className='clock'>
+          <div className='tmp-small'>a</div>
+          <div className='tmp'>
+            <div className='time-box'>hour</div>
+            <div className='time-box-seperator'>
+              <img src={iGreenCircle} className='colon' />
+            </div>
+            <div className='time-box'>minute</div>
+            <div className='time-box-seperator'>
+              <img src={iGreenCircle} className='colon' />
+            </div>
+            <div className='time-box'>second</div>
+          </div>
+          <div className='tmp-small'>c</div>
+        </div>
       </div>
     );
   }
